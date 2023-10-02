@@ -12,9 +12,16 @@ body {
 }
 
 #container {
-    border: solid 3px black;
+    border: 1px solid black;
     height: 720px;
     width: 720px;
     display: flex;
+    flex-wrap: wrap;
+}
 
+.square {
+    border: 1px solid red;
+    background-color: white;
+    display: flex;
+    box-sizing: border-box;
 }

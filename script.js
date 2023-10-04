@@ -9,7 +9,7 @@ output.textContent = (slider.value + "x" + slider.value);
 
 let sqNum = (slider.value * slider.value);
 function newGrid(sqNum) {
-    for (i = 0; i < sqNum; i++) {
+    for (let i = 0; i < sqNum; i++) {
         let content = document.createElement("div");
         content.classList.add("square");
         content.style.height = ((720 / slider.value) + "px");
@@ -46,7 +46,7 @@ slider.addEventListener("input", function () {
 let cell = grid.children;
 
 blackBtn.addEventListener("click", function () {
-    for (i = 0; i < (slider.value * slider.value); i++) {
+    for (let i = 0; i < (slider.value * slider.value); i++) {
         cell[i].addEventListener("mouseover", function (e) {
             e.target.style.backgroundColor = "black";
         });
@@ -54,7 +54,7 @@ blackBtn.addEventListener("click", function () {
 })
 
 rgbBtn.addEventListener("click", function () {
-    for (i = 0; i < (slider.value * slider.value); i++) {
+    for (let i = 0; i < (slider.value * slider.value); i++) {
         cell[i].addEventListener("mouseover", function (e) {
             e.target.style.backgroundColor = randomColor();
         });
@@ -62,7 +62,7 @@ rgbBtn.addEventListener("click", function () {
 })
 
 resetBtn.addEventListener("click", function () {
-    for (i = 0; i < (slider.value * slider.value); i++) {
+    for (let i = 0; i < (slider.value * slider.value); i++) {
         cell[i].style.backgroundColor = "white";
     }
 })
